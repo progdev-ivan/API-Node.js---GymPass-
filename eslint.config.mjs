@@ -2,6 +2,10 @@ import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 export default [
+  {
+    ignores: ['node_modules', 'build'],
+  },
+
   // Aplica as configurações em arquivos JavaScript e TypeScript
   {
     files: ['**/*.{js,mjs,cjs,ts}'],
@@ -20,7 +24,7 @@ export default [
       sourceType: 'module',
     },
     rules: {
-      // Aspas simples
+      // Aspas simples (alinhado ao Prettier)
       quotes: ['error', 'single', { avoidEscape: true }],
 
       // Ponto e vírgula obrigatório no final
@@ -31,7 +35,7 @@ export default [
 
       // Desativa aviso de variáveis não usadas quando começam com "_"
       '@typescript-eslint/no-unused-vars': [
-        'warn',
+        'error',
         { argsIgnorePattern: '^_' },
       ],
 

@@ -1,36 +1,41 @@
 {
-    "name": "api-solid-gympass",
-    "version": "1.0.0",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start:dev": "tsx watch src/server.ts",
-        "start": "node build/server.js",
-        "build": "tsup src --out-dir build --format esm",
-        "prisma:generate": "prisma generate",
-        "prisma:migrate:dev": "prisma migrate dev",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "description": "",
-    "devDependencies": {
-        "@eslint/js": "10.0.1",
-        "@types/node": "24.13.3",
-        "eslint": "10.10.0",
-        "prisma": "6.19.3",
-        "tsup": "8.5.1",
-        "tsx": "4.23.13",
-        "typescript": "5.9.3",
-        "typescript-eslint": "8.70.0"
-    },
-    "dependencies": {
-        "@prisma/client": "6.19.3",
-        "dotenv": "17.3.1",
-        "fastify": "5.7.4",
-        "zod": "4.3.6"
-    }
+  "name": "api-solid-gympass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit",
+    "start:dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build --format esm",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.13.3",
+    "eslint": "10.10.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.5.0",
+    "prettier": "^3.9.6",
+    "prisma": "6.19.3",
+    "tsup": "8.5.1",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.0"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "dotenv": "17.3.1",
+    "fastify": "5.7.4",
+    "zod": "4.3.6"
+  }
 }
